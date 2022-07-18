@@ -9,6 +9,7 @@
 }
 body {
     font-family:"Poppins", sans-serif;
+    background-color:#9F9F9F;
 }
 
 /* typography end */
@@ -60,7 +61,7 @@ header .menu i {
 }
 /* navbar start */
 header nav {
-   
+   z-index:222;
 }
 header nav ul {
     display:flex;
@@ -78,6 +79,44 @@ header nav ul li a {
 header nav ul li a img {
     height:51px;
     width:51px;
+}
+
+/* main section start */
+main .container {
+    background:white;
+    margin-top:36px;
+    padding:30px;
+    border-radius:5px;
+}
+main .top-player h3{
+    font-size:24px;
+    line-height:36px;
+    color:#562EFF;
+}
+main .top-player .player-container{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-row-gap:30px;
+}
+main .top-player .player{
+    display:flex;
+    align-items:center;
+}
+main .top-player .player .player-image img {
+    width:56px;
+    height:56px;
+}
+main .top-player .player .player-name h5{
+    font-size:18px;
+    line-height:27px;
+    text-transform:capitalize;
+    font-weight:500;
+    margin-left:16px;
+}
+main .container hr {
+    margin:30px 0;
+    border:1px solid #D1D1D1;
 }
 /* Division css end */
 
@@ -100,11 +139,11 @@ header nav ul li a img {
     header nav {
         position:absolute;
         width:40%;
-        top:70%;right:-200%;
-        background:black;
+        top:100%;right:-200%;
+        background:#562EFF;
         color:black;
         height:30vh;
-        z-index:-1;
+        z-index:2222;
     }
     header nav ul {
         flex-flow:column-reverse;
@@ -116,5 +155,24 @@ header nav ul li a img {
     }
     .nav-toggle{
         right:0;
+    }
+
+    /* main section top player */
+    main .container {
+        width:90%;
+    }
+    main .top-player .player-container {
+        grid-template-columns:repeat(1, 1fr);
+    }
+}
+
+/* media quary mobile 576-768*/
+@media (min-width:576px) and (max-width:768px){
+    /* main section top player */
+    main .container {
+        width:90%;
+    }
+    main .top-player .player-container {
+        grid-template-columns:repeat(2, 1fr);
     }
 }
