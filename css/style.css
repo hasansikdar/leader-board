@@ -88,10 +88,11 @@ main .container {
     padding:30px;
     border-radius:5px;
 }
-main .top-player h3{
+main h3{
     font-size:24px;
     line-height:36px;
     color:#562EFF;
+    text-transform:capitalize;
 }
 main .top-player .player-container{
     margin-top:30px;
@@ -118,6 +119,43 @@ main .container hr {
     margin:30px 0;
     border:1px solid #D1D1D1;
 }
+
+/* top blog */
+main .top-blog{}
+main .blog-container{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    grid-row-gap:26px;
+}
+main .blog-container .blog{
+    display:flex;
+
+}
+main .blog-container .blog .blog-image img{
+    width:177px;
+    height:117px;
+}
+main .blog-container .blog .blog-content{
+    width:190px;
+    height:68px;
+    margin-left:16px;
+}
+main .blog-container .blog .blog-content p{
+    font-size:19px;
+    line-height:36px;
+    font-weight:500;
+}
+main .blog-container .blog .blog-content span{
+    color:#9F9F9F;
+}
+main .blog-container .blog .blog-content a{
+    font-size:16px;
+    line-height:24px;
+    color:#562EFF;
+}
+
+
 /* Division css end */
 
 
@@ -126,6 +164,26 @@ main .container hr {
 
 
 /* media quary mobile 320px-576px*/
+@media (max-width:456px){
+    /* main .top-blog */
+    main .blog-container .blog {
+        flex-direction:column-reverse;
+    }
+    main .blog-container {
+        grid-template-columns:repeat(1, 1fr);
+    }
+    main .blog-container .blog .blog-content {
+        height:auto;
+        width:80%;
+        margin-bottom:5px;
+    }
+    main .blog-container .blog .blog-content p {
+        font-size:14px;
+    }
+    main .blog-container .blog .blog-image img{
+        width:80%;
+    }
+}
 @media (max-width:576px){
     header .container {
         
@@ -164,6 +222,10 @@ main .container hr {
     main .top-player .player-container {
         grid-template-columns:repeat(1, 1fr);
     }
+    /* main section top blog */
+    main .blog-container {
+        grid-template-columns:repeat(1, 1fr);
+    }
 }
 
 /* media quary mobile 576-768*/
@@ -174,5 +236,20 @@ main .container hr {
     }
     main .top-player .player-container {
         grid-template-columns:repeat(2, 1fr);
+    }
+    main .blog-container{
+        grid-template-columns:repeat(1, 1fr);
+    }
+}
+
+/* media quary mobile 768-900 */
+@media (min-width:768px) and (max-width:1200px){
+    main .blog-container .blog {
+        flex-direction:column-reverse;
+    }
+    main .blog-container .blog .blog-content {
+        height:auto;
+        margin-left:0;
+        margin-bottom:5px;
     }
 }
