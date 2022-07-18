@@ -28,7 +28,7 @@ body {
 /* header start */
 header {
     background-color:#562EFF;
-    padding:26px 0;
+    padding:12px 0;
     position:relative;
     width:100%;
 }
@@ -79,6 +79,9 @@ header nav ul li a {
 header nav ul li a img {
     height:51px;
     width:51px;
+}
+header nav ul li:last-child a{
+    margin:0;
 }
 
 /* main section start */
@@ -230,9 +233,16 @@ main .blog-container .blog .blog-content a{
 
 /* media quary mobile 320px-576px*/
 @media (max-width:456px){
+    header {
+        position:fixed;
+        left:0;top:0;
+    }
+    main .container {
+        margin-top:100px;
+    }
     /* main .top-blog */
     main .blog-container .blog {
-        flex-direction:column-reverse;
+        flex-direction:column;
     }
     main .blog-container {
         grid-template-columns:repeat(1, 1fr);
@@ -248,6 +258,13 @@ main .blog-container .blog .blog-content a{
     main .blog-container .blog .blog-image img{
         width:80%;
     }
+    .course .course-content ul li span {
+        padding:0 2px;
+    }
+    .course .course-content ul {
+        justify-content:space-between;
+    }
+
 }
 @media (max-width:576px){
     header .container {
