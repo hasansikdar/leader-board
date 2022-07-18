@@ -19,6 +19,43 @@
 
 </head>
 <body>
-    
+    <!-- header start -->
+    <header>
+        <div class="container">
+            <!--logo-->
+            <div class="logo">
+                <img src="images/icons/logo.png" alt="logo">
+                <h4>Idea</h4>
+            </div>
+            <div class="menu">
+                <i class="fa fa-bars"></i>
+            </div>
+            <!--navigation-->
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Works</a></li>
+                    <li><a href="#"><img src="images/icons/profile.png" alt="profile"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- header End -->
+
+
+
+    <!--jquery js file-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- custom js file -->
+    <script>
+        $(document).ready(function(){
+            $('.menu i').click(function(){
+                $(this).toggleClass('fa-times');
+                $('nav').toggleClass('nav-toggle');
+            })
+        })
+    </script>
 </body>
 </html>
