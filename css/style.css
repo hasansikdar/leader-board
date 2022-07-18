@@ -206,6 +206,7 @@ main .blog-container .blog .blog-content a{
 .course .course-content ul {
     display:flex;
     align-items:center;
+    justify-content:space-between;
 }
 .course .course-content ul li .fa-star {
     color:#FFC014;
@@ -214,7 +215,6 @@ main .blog-container .blog .blog-content a{
 .course .course-content ul li span {
     color:#A2A2A2;
     font-size:15px;
-    padding:0 15px;
 }
 .course .course-content ul li:last-child {
     color:#FF4A60;
@@ -257,9 +257,6 @@ main .blog-container .blog .blog-content a{
     }
     main .blog-container .blog .blog-image img{
         width:80%;
-    }
-    .course .course-content ul li span {
-        padding:0 2px;
     }
     .course .course-content ul {
         justify-content:space-between;
@@ -336,11 +333,18 @@ main .blog-container .blog .blog-content a{
     }
 }
 
-/* media quary mobile 768-900 */
+/* media quary mobile 768-1200 */
 @media (min-width:768px) and (max-width:1200px){
-    main .blog-container .blog {
-        flex-direction:column-reverse;
+    .container {
+        width:80%;
     }
+    main .blog-container .blog {
+        flex-direction:column;
+    }
+    main .blog-container {
+        grid-template-columns:repeat(3, 1fr);
+    }
+    
     main .blog-container .blog .blog-content {
         height:auto;
         margin-left:0;
