@@ -158,7 +158,72 @@ main .blog-container .blog .blog-content a{
 
 /* Division css end */
 
+/* latest course section start */
+#latest-course .container {
+    padding:30px;
+    background:white;
+    margin-top:20px;
+    border-radius:5px;
+}
+.latest-course h3 {
+    font-size:24px;
+    line-height:36px;
+    color:#562EFF;
+    text-transform:capitalize;
+}
+.course-container {
+    margin-top:20px;
+    display:grid;
+    grid-template-columns:repeat(3, 1fr);
+    grid-gap:23px;
 
+}
+.course {
+    box-shadow:0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius:8px;
+    padding:13px;
+}
+/* .course .course-image img{
+    width:224px;
+    height:104px;
+} */
+.course .course-content h5 {
+    font-size:18px;
+    line-height:24px;
+    font-weight:500;
+    color:#1E1E1E;
+}
+.course .course-content small a {
+    color:#ED6B4F;
+    font-size:14px;
+    line-height:20px;
+    margin:8px 0;
+    display:inline-block;
+}
+.course .course-content ul {
+    display:flex;
+    align-items:center;
+}
+.course .course-content ul li .fa-star {
+    color:#FFC014;
+    font-size:13px;
+}
+.course .course-content ul li span {
+    color:#A2A2A2;
+    font-size:15px;
+    padding:0 15px;
+}
+.course .course-content ul li:last-child {
+    color:#FF4A60;
+    padding:3px 8px;
+    border-radius:20px;
+    background:rgba(255, 74, 96, .3);
+    font-size:13px;
+}
+.course .course-image img {
+    width:100%;
+}
+/* latest course section End */
 
 
 
@@ -226,6 +291,12 @@ main .blog-container .blog .blog-content a{
     main .blog-container {
         grid-template-columns:repeat(1, 1fr);
     }
+    #latest-course .container {
+        width:90%;
+    }
+    .course-container {
+        grid-template-columns:repeat(1, 1fr);
+    }
 }
 
 /* media quary mobile 576-768*/
@@ -238,6 +309,12 @@ main .blog-container .blog .blog-content a{
         grid-template-columns:repeat(2, 1fr);
     }
     main .blog-container{
+        grid-template-columns:repeat(1, 1fr);    
+    }
+    #latest-course .container {
+        width:90%;
+    }
+    .course-container {
         grid-template-columns:repeat(1, 1fr);
     }
 }
@@ -252,4 +329,8 @@ main .blog-container .blog .blog-content a{
         margin-left:0;
         margin-bottom:5px;
     }
+    .course-container {
+        grid-template-columns:repeat(2, 1fr);
+    }
+    
 }
